@@ -1,0 +1,270 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Plus Jakarta Sans',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#4d5875;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.game-container{
+    width:100%;
+    max-width:600px;
+    text-align:center;
+    padding:40px 20px;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.title{
+    font-size:58px;
+    font-weight:800;
+    color:#fff;
+    line-height:1;
+    margin-bottom:18px;
+
+    text-shadow:
+    0 4px 0 rgba(0,0,0,.25),
+    0 0 8px rgba(0,0,0,.25);
+}
+
+.subtitle{
+    color:#f1f1f1;
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:65px;
+}
+
+/* =========================
+   COIN
+========================= */
+
+.coin-wrapper{
+    width:220px;
+    height:220px;
+    margin:auto;
+    position:relative;
+    perspective:1200px;
+}
+
+/* Coin Shadow */
+
+.coin-shadow{
+    width:85px;
+    height:14px;
+    background:rgba(0,0,0,.28);
+    border-radius:50%;
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+    filter:blur(2px);
+}
+
+/* Coin */
+
+.coin{
+    width:150px;
+    height:150px;
+
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+
+    transform-style:preserve-3d;
+    transition:transform .6s ease;
+
+    cursor:pointer;
+}
+
+.side{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    backface-visibility:hidden;
+
+    border:8px solid #ffd24b;
+
+    box-shadow:
+    inset 0 4px 0 rgba(255,255,255,.35),
+    inset 0 -6px 0 rgba(0,0,0,.12),
+    0 10px 18px rgba(0,0,0,.18);
+
+}
+
+/* HEAD */
+
+.heads{
+
+    background:
+    radial-gradient(circle at 30% 30%,#ffe78d,#ffcb39 55%,#f4a300);
+
+}
+
+/* TAIL */
+
+.tails{
+
+    background:
+    radial-gradient(circle at 30% 30%,#ffe78d,#ffcb39 55%,#f4a300);
+
+    transform:rotateY(180deg);
+
+}
+
+.currency-symbol{
+
+    font-size:70px;
+    font-weight:800;
+    color:#fff4b3;
+
+    text-shadow:0 2px rgba(0,0,0,.15);
+
+}
+
+/* =========================
+   RESULT
+========================= */
+
+#result-text{
+
+    margin-top:30px;
+
+    color:white;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    margin-bottom:42px;
+
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+
+    background:#2d83d7;
+
+    color:white;
+
+    border:none;
+
+    padding:16px 52px;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+    0 5px 0 #1c63a6;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+button:active{
+
+    transform:translateY(3px);
+
+    box-shadow:none;
+
+}
+
+button:disabled{
+
+    opacity:.7;
+
+    cursor:not-allowed;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.title{
+
+font-size:44px;
+
+}
+
+.subtitle{
+
+font-size:16px;
+
+margin-bottom:45px;
+
+}
+
+.coin{
+
+width:125px;
+
+height:125px;
+
+}
+
+.currency-symbol{
+
+font-size:55px;
+
+}
+
+#result-text{
+
+font-size:28px;
+
+}
+
+button{
+
+padding:14px 40px;
+
+font-size:16px;
+
+}
+
+}

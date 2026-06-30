@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flip the Coin</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+        <!-- Heading -->
+         <h1 class="title">Flip the Coin</h1>
+         <p class="subtitle">Press the coin or the button to flip the coin</p>
+
+         <!-- Coin -->
+          <div class="coin-wrapper">
+            <div class="coin-shadow">
+            </div>
+
+            <div class="coin" id="coin">
+                <div class="side heads">
+                    <span class="currency-symbol">$</span>
+                </div>
+
+                <div class="side tails">
+                    <span class="currency-symbol">T</span>
+
+                </div>
+            </div>
+          </div>
+
+          <!-- Result -->
+           <h2 id="result-text">Heads</h2>
+
+           <!-- Button -->
+            <button id="flip-btn">RANDOM</button>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
